@@ -1,0 +1,15 @@
+syntax = "proto3";
+package todo.v1;
+option go_package="github.com/iralance/scanner/server/todo/api/gen/v1;todopb";
+
+message CreateTodoRequest {
+  string title = 1;
+}
+
+message CreateTodoResponse {
+  string word = 1;
+}
+
+service TodoService {
+rpc CreateTodo (CreateTodoRequest) returns (CreateTodoResponse);
+}
